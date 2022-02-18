@@ -190,6 +190,7 @@ export class HeaderBooking extends Component {
                                 </div>
                                 <div className="form-group col-3" >
                                     <label htmlFor="room">ห้องผ่าตัด </label>
+                                    <br/>
                                     <Dropdown value={this.state.room} options={this.roomList} onChange={this.onRoomChange} 
                                         optionLabel="room" filter filterBy="room" style={{ width: 250 }} placeholder="ค้นหาห้องผ่าตัด"/>
                                 </div>

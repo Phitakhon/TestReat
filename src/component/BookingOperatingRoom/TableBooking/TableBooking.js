@@ -103,10 +103,10 @@ export class TableBooking extends Component {
     renderHeader() {
         return (
             <div className="flex justify-content-between align-items-center">
-                <h5 className="m-0">Customers</h5>
+                <h3 className="m-0">ตารางการใช้ห้องผ่าตัด</h3>
                 <span className="p-input-icon-left">
                     <i className="pi pi-search" />
-                    <InputText value={this.state.globalFilterValue} onChange={this.onGlobalFilterChange} placeholder="Keyword Search" />
+                    <InputText value={this.state.globalFilterValue} onChange={this.onGlobalFilterChange} placeholder="ค้นหาข้อมูลในตาราง" />
                 </span>
             </div>
         )
@@ -116,16 +116,6 @@ export class TableBooking extends Component {
         return (
             <React.Fragment>
                 <span className="image-text">{rowData.user.name}</span>
-            </React.Fragment>
-        );
-    }
-
-    representativeBodyTemplate(rowData) {
-        const representative = rowData.representative;
-        return (
-            <React.Fragment>
-                <img alt={representative.name} src={`images/avatar/${representative.image}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} width={32} style={{ verticalAlign: 'middle' }} />
-                <span className="image-text">{representative.name}</span>
             </React.Fragment>
         );
     }
